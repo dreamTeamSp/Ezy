@@ -1,0 +1,287 @@
+.fundoImg{
+    background-image: url(../images/portfolio/fundoLogin.png);
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container que envolve o header, o formulário e o footer */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o container ocupe toda a altura da viewport */
+}
+
+.hero-banner-v1-position-relative fundo-login {
+    background-image: url('assets/images/portfolio/fundoLogin.png');
+    background-size: cover; /* Faz a imagem cobrir o container */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    height: calc(100vh - 120px); /* Ajusta a altura para não sobrepor o header e o footer */
+    display: flex;
+    justify-content: center; /* Garante que o conteúdo principal fique centralizado horizontalmente */
+    align-items: center; 
+}
+
+/* Header e footer */
+header, footer {
+    background-color: #f0f0f0; /* Ajuste conforme necessário */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Centralização do conteúdo principal (formulário) */
+.main-content {
+    flex: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 600px;
+}
+
+/* Estilos do formulário */
+.login-form {
+    background-color: #f8f2e9;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+.login-form .sub-title {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.login-form label{
+    margin-top: 20px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f7f3ee;
+    border: 1px solid #d3c8bb;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form input:focus {
+    border-color: #6E19B3;
+    box-shadow: 0 0 10px rgba(126, 51, 255, 0.2);
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px; /* Ajustado conforme solicitado */
+    background-color: #6E19B3;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px; /* Ajustado conforme solicitado */
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #6514a8;
+    box-shadow: 0 0 10px rgba(93, 29, 187, 0.3);
+}
+
+/* Estilos do formulário */
+.signup-form {
+    background-color: #f8f2e9;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+.signup-form .sub-title {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.signup-form label{
+    margin-top: 20px;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f7f3ee;
+    border: 1px solid #d3c8bb;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signup-form input:focus {
+    border-color: #6E19B3;
+    box-shadow: 0 0 10px rgba(126, 51, 255, 0.2);
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 10px; /* Ajustado conforme solicitado */
+    background-color: #6E19B3;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px; /* Ajustado conforme solicitado */
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signup-form button:hover {
+    background-color: #6514a8;
+    box-shadow: 0 0 10px rgba(93, 29, 187, 0.3);
+}
+
+/* Ajustes para o link de cadastro */
+.signup-link {
+    display: block;
+    margin-top: 20px;
+    color: #7e33ff;
+    text-decoration: none;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilo geral para a seção de login */
+.login {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa toda a altura da viewport */
+    background: linear-gradient(
+        0deg,
+     
+
+    );
+    overflow: hidden; /* Garante que os efeitos não vazem do container */
+}
+
+/* Conteúdo de login */
+.login-content {
+    background-color: #ffffff; /* Fundo branco para o formulário */
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Máxima largura do formulário */
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo do formulário fique acima do fundo */
+}
+
+/* Estilos do formulário */
+.login-form {
+    background-color: #f8f2e9;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-form .sub-title {
+    font-size: 24px; /* Ajuste do tamanho da fonte */
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-form label {
+    margin-top: 20px;
+    display: block;
+}
+
+.login-form input {
+    width: calc(100% - 20px); /* Ajusta o tamanho para não ultrapassar o padding */
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f7f3ee;
+    border: 1px solid #d3c8bb;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form input:focus {
+    border-color: #6E19B3;
+    box-shadow: 0 0 10px rgba(126, 51, 255, 0.2);
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6E19B3;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #5d1dbb;
+    box-shadow: 0 0 10px rgba(93, 29, 187, 0.3);
+}
+
+/* Link de cadastro */
+.signup-link {
+    display: block;
+    margin-top: 20px;
+    color: #7e33ff;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos específicos para o fundo da seção de login */
+.login:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/footer/banner.png') no-repeat left;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(100px);
+}
+
+.login:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/footer/banner1.png') no-repeat right;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(100px);
+}
