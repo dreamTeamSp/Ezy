@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">EzyMobile</string>
-    <string name="title_activity_home">Home</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Cursos</string>
-    <string name="title_notifications">Cursando</string>
-</resources>
