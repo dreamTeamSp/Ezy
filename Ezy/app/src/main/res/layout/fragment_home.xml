@@ -5,12 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.home.HomeFragment"
+    android:background="@drawable/fundohome">
 
 
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="2000dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -23,10 +24,53 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <ImageButton
+                android:id="@+id/btPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/cabecalho"
+                android:scaleType="centerInside" />
+
+
             <ImageView
-                android:layout_width="409dp"
-                android:layout_height="2000dp"
-                android:background="@drawable/home" />
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerInside"
+                android:background="@drawable/sobrenosimg" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/textosobrenos"
+                android:scaleType="centerInside" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerInside"
+                android:background="@drawable/nossaequipe" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerInside"
+                android:background="@drawable/mentor1" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerInside"
+                android:background="@drawable/mentor2" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerInside"
+                android:background="@drawable/mentor3" />
+
+
+
         </LinearLayout>
     </ScrollView>
 

@@ -65,49 +65,52 @@ public class NotificationsFragment extends Fragment {
                 .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
-                        Log.d("TESTE APP", documentSnapshot.getId() + " => " + documentSnapshot.getData());
-                        //Recupera o valor gravado no Firestore
-                        Map<String, Object> mapa = documentSnapshot.getData();
-                        //Atribui que o mapa não estará vazio
-                        assert mapa != null;
-                        //Para cada item dentro do Map...
-                        for (Map.Entry<String, Object> entry : mapa.entrySet()) {
-                            if (entry.getValue() != null) {
-                                //Recupera cada curso da lista
-                                Map<String, Object> cadaCurso = (Map<String, Object>) documentSnapshot.getData().get(entry.getKey());
-                                //Recupera informações de cada curso
-                                String titulo = (String) cadaCurso.get("titulo");
-                                String descricao = (String) cadaCurso.get("desc");
-                                String codigo = (String) cadaCurso.get("codigo");
-                                String img = (String) cadaCurso.get("img");
+                        if(documentSnapshot.getData() != null){
+                            Log.d("TESTE APP", documentSnapshot.getId() + " => " + documentSnapshot.getData());
+                            //Recupera o valor gravado no Firestore
+                            Map<String, Object> mapa = documentSnapshot.getData();
+                            //Atribui que o mapa não estará vazio
+                            assert mapa != null;
+                            //Para cada item dentro do Map...
+                            for (Map.Entry<String, Object> entry : mapa.entrySet()) {
+                                if (entry.getValue() != null) {
+                                    //Recupera cada curso da lista
+                                    Map<String, Object> cadaCurso = (Map<String, Object>) documentSnapshot.getData().get(entry.getKey());
+                                    //Recupera informações de cada curso
+                                    String titulo = (String) cadaCurso.get("titulo");
+                                    String descricao = (String) cadaCurso.get("desc");
+                                    String codigo = (String) cadaCurso.get("codigo");
+                                    String img = (String) cadaCurso.get("img");
 
-                                Log.d("TESTE APP", " >>>>>>>>" + titulo);
-                                Log.d("TESTE APP", " >>>>>>>>" + descricao);
-                                Log.d("TESTE APP", " >>>>>>>>" + codigo);
+                                    Log.d("TESTE APP", " >>>>>>>>" + titulo);
+                                    Log.d("TESTE APP", " >>>>>>>>" + descricao);
+                                    Log.d("TESTE APP", " >>>>>>>>" + codigo);
 
-                                cursos c = new cursos(codigo, titulo, descricao, img);
-                                listaCursos.add(c);
+                                    cursos c = new cursos(codigo, titulo, descricao, img);
+                                    listaCursos.add(c);
 
 
-                                // Do something else with entry.getKey() and entry.getValue()
-                            } else {
-                                throw new IllegalStateException("Expecting either String or Class as entry value");
+                                    // Do something else with entry.getKey() and entry.getValue()
+                                } else {
+                                    throw new IllegalStateException("Expecting either String or Class as entry value");
+                                }
                             }
+                            //RecyclerView....
+                            //Após encerrar a repetição e adicionar todos os produtos na lista
+                            //fazemos a configuração do RecyclerView e adicionamos a lista para ser exibida nele
+                            //Criando um objeto do RecyclerView da tela
+                            RecyclerView recyclerTela = root.findViewById(R.id.recyclerView);
+
+                            boolean jaInscrito = true;
+                            //Passando a lista para o Adapter personalizado
+                            cursosAdapter adapter = new cursosAdapter(listaCursos, getContext(), jaInscrito);
+
+                            //Configuração de um gestor de layout
+                            recyclerTela.setLayoutManager(new LinearLayoutManager(root.getContext()));
+                            //Passando o adapter para o RecyclerView
+                            recyclerTela.setAdapter(adapter);
                         }
-                        //RecyclerView....
-                        //Após encerrar a repetição e adicionar todos os produtos na lista
-                        //fazemos a configuração do RecyclerView e adicionamos a lista para ser exibida nele
-                        //Criando um objeto do RecyclerView da tela
-                        RecyclerView recyclerTela = root.findViewById(R.id.recyclerView);
 
-                        boolean jaInscrito = true;
-                        //Passando a lista para o Adapter personalizado
-                        cursosAdapter adapter = new cursosAdapter(listaCursos, getContext(), jaInscrito);
-
-                        //Configuração de um gestor de layout
-                        recyclerTela.setLayoutManager(new LinearLayoutManager(root.getContext()));
-                        //Passando o adapter para o RecyclerView
-                        recyclerTela.setAdapter(adapter);
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
